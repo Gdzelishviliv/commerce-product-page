@@ -10,7 +10,7 @@ const Header = ({ cartItems, removeFromCart }: any) => {
     setIsCartOpen(!isCartOpen);
   };
 
-  const totalQuantity = cartItems.reduce((acc, curr) => acc + curr.quantity, 0);
+  const totalQuantity = cartItems.reduce((acc:number, curr:void|any) => acc + curr.quantity, 0);
 
   return (
     <div className="header-container">
